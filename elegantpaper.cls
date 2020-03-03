@@ -32,15 +32,22 @@
 
 \RequirePackage{hyperref}
 \hypersetup{
-  pdfborder={0 0 0},
-  hyperfootnotes=true,
-  colorlinks=true,
-  linkcolor={red},
-  urlcolor={winered},
-  filecolor={winered},
-  citecolor={winered},
+  pdfborder = {0 0 0},
+  hyperfootnotes = true,
+  colorlinks = true,
+  linkcolor = blue,
+  urlcolor = winered,
+  filecolor = winered,
+  citecolor = winered,
   linktoc=all,
+	%pdfproducer={},
+	%pdfcreator={LaTeX with myart class},
+	pdftitle={本科毕业论文文献翻译},
+	pdfsubject={https://www.sciencedirect.com/science/article/pii/S0047272710000885},
+	pdfauthor={任涛},
+	pdfkeywords={Translation},
 }
+\urlstyle{rm}
 
 \RequirePackage{amsthm}
 \RequirePackage{amsmath}
@@ -71,18 +78,18 @@
 \RequirePackage[round,comma,sort&compress]{natbib}
 \setlength{\bibsep}{0.0pt}
 \def\bibfont{\footnotesize}
+\bibliographystyle{plainnat}
 
 % define the hyperref color 
 \RequirePackage{xcolor}
 \definecolor{winered}{rgb}{0.5,0,0}
-
 \definecolor{lightgrey}{rgb}{0.95,0.95,0.95}
 \definecolor{commentcolor}{RGB}{0,100,0}
 \definecolor{frenchplum}{RGB}{190,20,83}
 
 
 % add the email cmd 
-\newcommand\email[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+\newcommand\email[1]{\href{mailto:#1}{#1}}
 
 % font settings
 \PassOptionsToPackage{no-math}{fontspec}
@@ -109,16 +116,6 @@
   \AtEndOfClass{%
     \RequirePackage{microtype}}
 \fi
-
-
-%%% use yhmath pkg, uncomment following code
-% \let\oldwidering\widering
-% \let\widering\undefined
-% \RequirePackage{yhmath}
-% \let\widering\oldwidering
-
-%%% use esvect pkg, uncomment following code
-% \RequirePackage{esvect}
 
 \DeclareSymbolFont{CMlargesymbols}{OMX}{cmex}{m}{n}
 \let\sumop\relax\let\prodop\relax
@@ -149,10 +146,9 @@
   \renewcommand\abstractname{摘\hspace{1em}要}
   \setlength\parindent{2\ccwd}
   \renewcommand{\abstracttextfont}{\small\upshape\kaishu\noindent\ignorespaces}
-  % 新定义命令
   \newcommand{\keywords}[1]{\vskip2ex\par\noindent\normalfont{\bfseries 关键词: } #1}
-  \newcommand\figref[1]{{\bfseries 图~\ref{#1}}}
-  \newcommand\tabref[1]{{\bfseries 表~\ref{#1}}}
+  \newcommand\figref[1]{{图~\ref{#1}~}}
+  \newcommand\tabref[1]{{表~\ref{#1}~}}
 }{\relax}
 
 \AtBeginEnvironment{verbatim}{\microtypesetup{activate=false}}
@@ -170,7 +166,7 @@
   \ifx\1\empty
 }
 \newtoks\version
-\newtoks\institute
+\newtoks\translator
 
 \def\@maketitle{%
   \newpage
@@ -182,9 +178,9 @@
     {\large
       \lineskip .5em%
       \begin{tabular}[t]{c}%
-        \@author\\[1ex]
+        \@author\\[1.5ex]
       \end{tabular}\par}
-      \the\institute%
+      \small\the\translator%
 \vskip 0.5ex%
 \IfEmpty\version
 \else 
@@ -198,3 +194,7 @@
   \end{center}%
   \par
 }
+
+\usepackage{appendix}
+\renewcommand{\appendixtocname}{附录}
+\renewcommand{\appendixpagename}{附录}
