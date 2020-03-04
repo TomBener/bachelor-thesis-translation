@@ -1,9 +1,6 @@
-<!-- Author: Tom Ben -->
-<!-- Email: me@tomben.me -->
-
 ## 预览
 
-![first-page-english](images/the-first-page-english.png)
+![first-page-english](figures/the-first-page-english.png)
 
 ## 致谢
 

@@ -67,6 +67,8 @@
 \RequirePackage{abstract}
 \RequirePackage{hologo}
 \RequirePackage{threeparttable}
+\RequirePackage{subfigure}
+\RequirePackage{fontawesome5}
 
 \linespread{1.35}
 \graphicspath{{images/}{figures/}{fig/}{img/}}
@@ -80,7 +82,7 @@
 \RequirePackage[shortlabels,inline]{enumitem}
 \setlist{nolistsep}
 
-\RequirePackage[round,comma,sort&compress]{natbib}
+\RequirePackage[round,sort&compress]{natbib}
 \setlength{\bibsep}{0.0pt}
 \def\bibfont{\footnotesize}
 \bibliographystyle{plainnat}
@@ -96,7 +98,7 @@
 \newcommand\email[1]{\href{mailto:#1}{#1}}
 
 % font settings
-\PassOptionsToPackage{no-math}{fontspec}
+%\PassOptionsToPackage{no-math}{fontspec}
 
 \ifdefstring{\ELEGANT@lang}{cn}{%
   \RequirePackage[UTF8, scheme=plain]{ctex}
@@ -107,8 +109,7 @@
         {SourceHanSerifSC-Regular} % 全局中文字体为思源宋体和楷体
 
 \RequirePackage{libertine}
-%\RequirePackage{newtxtext}
-\RequirePackage{newtxmath}
+\RequirePackage[libertine]{newtxmath}
 \RequirePackage{esint}
 
 \ifxetex
@@ -160,7 +161,7 @@
 \AtBeginDocument{
   %\setlength{\abovedisplayskip}{3pt}
   %\setlength{\belowdisplayskip}{3pt}
-  %\setlength{\footnotesep}{12pt}
+  \setlength{\footnotesep}{12pt}
 }
 
 \def\IfEmpty#1{%
@@ -203,3 +204,5 @@
 
 \usepackage{scrextend}
 \deffootnote[1em]{0em}{1em}{\textsuperscript{\thefootnotemark}\,}
+
+\usepackage{lipsum}
