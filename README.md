@@ -1,12 +1,16 @@
 <!-- Author: Tom Ben -->
 <!-- Email: me@tomben.me -->
 
-# 预览
+## 预览
 
-![first-page-english](image/first-page-english.png)
+![first-page-english](images/the-first-page-english.png)
+
+## 致谢
+
+感谢原作者的创作，以及 [ElegantPaper](https://github.com/ElegantLaTeX/ElegantPaper)。
 
 ## License
 
 This work is released under the LaTeX Project Public License, v1.3c or later. 
 
-本模板发布遵循 LaTeX 项目公共许可证 1.3c 或更高版本。 
+本模板发布遵循 LaTeX 项目公共许可证 1.3c 或更高版本。

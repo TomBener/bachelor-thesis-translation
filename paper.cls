@@ -1,11 +1,5 @@
-% Author: Dongsheng Deng
-% Homepage: https://ddswhu.me/
-% Email: elegantlatex2e@gmail.com
-% Lastest Version: https://github.com/ElegantLaTeX/ElegantPaper
-
-% --- Class structure: identification part
-\ProvidesClass{elegantpaper}[2019/10/17 v0.08 ElegantLaTeX Paper class]
-\NeedsTeXFormat{LaTeX2e} 
+\ProvidesClass{paper}
+\NeedsTeXFormat{LaTeX2e}
 
 \RequirePackage{kvoptions}
 \RequirePackage{ifthen}
@@ -23,12 +17,13 @@
 \ProcessKeyvalOptions*\relax
 \LoadClass{article}
 
-% settings for the hyperref and geometry
 \RequirePackage[
-  margin=2cm,
-  headheight=0pt,
-  headsep=0pt]{geometry}
-\setlength{\headsep}{5pt}
+  margin=2.2cm,
+  %headheight=0pt,
+  %headsep=5pt
+  ]
+  {geometry}
+%\setlength{\headsep}{20pt}
 
 \RequirePackage{hyperref}
 \hypersetup{
@@ -43,11 +38,20 @@
 	%pdfproducer={},
 	%pdfcreator={LaTeX with myart class},
 	pdftitle={本科毕业论文文献翻译},
-	pdfsubject={https://www.sciencedirect.com/science/article/pii/S0047272710000885},
+	pdfsubject={doi.org/10/dr2w2q},
 	pdfauthor={任涛},
 	pdfkeywords={Translation},
 }
 \urlstyle{rm}
+
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\chead{\footnotesize{\textit{M.D. Eriksen, S.S. Rosenthal / Journal of Public Economics 94 (2010) 953–966}}}
+\lhead{}
+\rhead{}
+\cfoot{\zihao{5} \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\footskip}{1.5cm}
 
 \RequirePackage{amsthm}
 \RequirePackage{amsmath}
@@ -62,9 +66,10 @@
 \RequirePackage{fancyvrb}
 \RequirePackage{abstract}
 \RequirePackage{hologo}
+\RequirePackage{threeparttable}
 
 \linespread{1.35}
-\graphicspath{{image/}{figure/}{fig/}{img/}}
+\graphicspath{{images/}{figures/}{fig/}{img/}}
 
 % caption settings 
 \RequirePackage[font=small,labelfont={bf}]{caption}
@@ -87,7 +92,6 @@
 \definecolor{commentcolor}{RGB}{0,100,0}
 \definecolor{frenchplum}{RGB}{190,20,83}
 
-
 % add the email cmd 
 \newcommand\email[1]{\href{mailto:#1}{#1}}
 
@@ -96,14 +100,12 @@
 
 \ifdefstring{\ELEGANT@lang}{cn}{%
   \RequirePackage[UTF8, scheme=plain]{ctex}
-  %\AfterEndPreamble{\renewcommand{\itshape}{\kaishu}}
 }{\relax}
 \setCJKmainfont[BoldFont = SourceHanSerifSC-Bold,
         %ItalicFont = KaiTi
         ]
         {SourceHanSerifSC-Regular} % 全局中文字体为思源宋体和楷体
 
-% newtxtext and newtxmath pkg
 \RequirePackage{libertine}
 %\RequirePackage{newtxtext}
 \RequirePackage{newtxmath}
@@ -156,9 +158,9 @@
 \AfterEndEnvironment{tabular}{}
 
 \AtBeginDocument{
-  \setlength{\abovedisplayskip}{3pt}
-  \setlength{\belowdisplayskip}{3pt}
-  \setlength{\footnotesep}{12pt}
+  %\setlength{\abovedisplayskip}{3pt}
+  %\setlength{\belowdisplayskip}{3pt}
+  %\setlength{\footnotesep}{12pt}
 }
 
 \def\IfEmpty#1{%
@@ -198,3 +200,6 @@
 \usepackage{appendix}
 \renewcommand{\appendixtocname}{附录}
 \renewcommand{\appendixpagename}{附录}
+
+\usepackage{scrextend}
+\deffootnote[1em]{0em}{1em}{\textsuperscript{\thefootnotemark}\,}
