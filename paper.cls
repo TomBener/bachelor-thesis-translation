@@ -18,7 +18,7 @@
 \LoadClass{article}
 
 \RequirePackage[
-  margin=2.2cm,
+  margin=2cm,
   %headheight=0pt,
   %headsep=5pt
   ]
@@ -46,12 +46,12 @@
 
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
-\chead{\footnotesize{\textit{M.D. Eriksen, S.S. Rosenthal / Journal of Public Economics 94 (2010) 953–966}}}
+\chead{\footnotesize{\textit{M.D. Eriksen, S.S. Rosenthal / Journal of Public Economics 94 (2010) 953\,–966}}}
 \lhead{}
 \rhead{}
 \cfoot{\zihao{5} \thepage}
 \renewcommand{\headrulewidth}{0.3pt}
-\setlength{\footskip}{1.5cm}
+%\setlength{\footskip}{1.5cm}
 
 \RequirePackage{amsthm}
 \RequirePackage{amsmath}
@@ -74,7 +74,7 @@
 \graphicspath{{images/}{figures/}{fig/}{img/}}
 
 % caption settings 
-\RequirePackage[font=small,labelfont={bf}]{caption}
+\RequirePackage[font=footnotesize,labelfont={bf}]{caption}
 \captionsetup[table]{skip=3pt}
 \captionsetup[figure]{skip=3pt}
 
@@ -147,6 +147,7 @@
   \newcommand\versiontext{版本：}%
   \newcommand\updatetext{}%
   \renewcommand\abstractname{摘\hspace{1em}要}
+  \renewcommand{\theequation}{\arabic{section}.\arabic{equation}} % 公式按 section 编号
   \setlength\parindent{2\ccwd}
   \renewcommand{\abstracttextfont}{\small\upshape\kaishu\noindent\ignorespaces}
   \newcommand{\keywords}[1]{\vskip2ex\par\noindent\normalfont{\bfseries 关键词: } #1}
@@ -204,5 +205,3 @@
 
 \usepackage{scrextend}
 \deffootnote[1em]{0em}{1em}{\textsuperscript{\thefootnotemark}\,}
-
-\usepackage{lipsum}
