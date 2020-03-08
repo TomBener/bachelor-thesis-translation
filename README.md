@@ -1,8 +1,11 @@
-## 预览
+## Preview
 
-![first-page-english](figures/the-first-page-english.png)
+|                          English                          |                          中文                          |
+| :-------------------------------------------------------: | :-------------------------------------------------------: |
+| ![first-page-english](figures/the-first-page-english.png) | ![first-page-english](figures/the-first-page-chinese.png) |
 
-## 致谢
+
+## Acknowledgement
 
 感谢原作者的创作，以及 [ElegantPaper](https://github.com/ElegantLaTeX/ElegantPaper)。
 

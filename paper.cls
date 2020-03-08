@@ -61,7 +61,6 @@
 \RequirePackage{multicol}
 \RequirePackage{multirow}
 \RequirePackage{linegoal}
-\RequirePackage{xcolor}
 \RequirePackage{graphicx}
 \RequirePackage{fancyvrb}
 \RequirePackage{abstract}
@@ -70,7 +69,7 @@
 \RequirePackage{subfigure}
 \RequirePackage{fontawesome5}
 
-\linespread{1.35}
+\linespread{1.3}
 \graphicspath{{images/}{figures/}{fig/}{img/}}
 
 % caption settings 
