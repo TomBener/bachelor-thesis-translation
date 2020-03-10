@@ -67,7 +67,7 @@
 \RequirePackage{hologo}
 \RequirePackage{threeparttable}
 \RequirePackage{subfigure}
-\RequirePackage{fontawesome5}
+\RequirePackage{fontawesome}
 
 \linespread{1.3}
 \graphicspath{{images/}{figures/}{fig/}{img/}}
