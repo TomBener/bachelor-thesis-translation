@@ -17,26 +17,17 @@
 \ProcessKeyvalOptions*\relax
 \LoadClass{article}
 
-\RequirePackage[
-  margin=2cm,
-  %headheight=0pt,
-  %headsep=5pt
-  ]
-  {geometry}
-%\setlength{\headsep}{20pt}
+\RequirePackage[margin=2cm]{geometry}
 
 \RequirePackage{hyperref}
 \hypersetup{
   pdfborder = {0 0 0},
   hyperfootnotes = true,
   colorlinks = true,
-  linkcolor = blue,
-  urlcolor = winered,
+  linkcolor = linkred,
+  urlcolor = blue!70!black,
   filecolor = winered,
   citecolor = winered,
-  linktoc=all,
-	%pdfproducer={},
-	%pdfcreator={LaTeX with myart class},
 	pdftitle={本科毕业论文文献翻译},
 	pdfsubject={doi.org/10/dr2w2q},
 	pdfauthor={任涛},
@@ -51,7 +42,6 @@
 \rhead{}
 \cfoot{\zihao{5} \thepage}
 \renewcommand{\headrulewidth}{0.3pt}
-%\setlength{\footskip}{1.5cm}
 
 \RequirePackage{amsthm}
 \RequirePackage{amsmath}
@@ -77,10 +67,6 @@
 \captionsetup[table]{skip=3pt}
 \captionsetup[figure]{skip=3pt}
 
-% list/itemize/enumerate setting
-\RequirePackage[shortlabels,inline]{enumitem}
-\setlist{nolistsep}
-
 \RequirePackage[round,sort&compress]{natbib}
 \setlength{\bibsep}{0.0pt}
 \def\bibfont{\footnotesize}
@@ -89,22 +75,15 @@
 % define the hyperref color 
 \RequirePackage{xcolor}
 \definecolor{winered}{rgb}{0.5,0,0}
-\definecolor{lightgrey}{rgb}{0.95,0.95,0.95}
-\definecolor{commentcolor}{RGB}{0,100,0}
-\definecolor{frenchplum}{RGB}{190,20,83}
+\definecolor{linkred}{rgb}{.5,0,.5}
 
 % add the email cmd 
 \newcommand\email[1]{\href{mailto:#1}{#1}}
 
-% font settings
-%\PassOptionsToPackage{no-math}{fontspec}
-
 \ifdefstring{\ELEGANT@lang}{cn}{%
   \RequirePackage[UTF8, scheme=plain]{ctex}
 }{\relax}
-\setCJKmainfont[BoldFont = SourceHanSerifSC-Bold,
-        %ItalicFont = KaiTi
-        ]
+\setCJKmainfont[BoldFont = SourceHanSerifSC-Bold]
         {SourceHanSerifSC-Regular} % 全局中文字体为思源宋体和楷体
 
 \RequirePackage{libertine}
@@ -159,8 +138,6 @@
 \AfterEndEnvironment{tabular}{}
 
 \AtBeginDocument{
-  %\setlength{\abovedisplayskip}{3pt}
-  %\setlength{\belowdisplayskip}{3pt}
   \setlength{\footnotesep}{12pt}
 }
 
