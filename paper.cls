@@ -28,10 +28,12 @@
   urlcolor = blue!70!black,
   filecolor = winered,
   citecolor = winered,
-	pdftitle={本科毕业论文文献翻译},
+  pdfproducer = {XeLaTeX \& BibTeX},
+  pdfcreator = {LaTeX},
+	pdftitle={基于地点的补贴式租赁住房的挤出效应：来自LIHTC项目的新证据},
 	pdfsubject={doi.org/10/dr2w2q},
 	pdfauthor={任涛},
-	pdfkeywords={Translation},
+	pdfkeywords={挤出效应，保障性住房，LIHTC，Translation},
 }
 \urlstyle{rm}
 
